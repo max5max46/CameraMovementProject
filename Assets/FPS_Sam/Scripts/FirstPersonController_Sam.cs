@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 // Sam Robichaud 2022
 // NSCC-Truro
@@ -81,7 +82,7 @@ public class FirstPersonController_Sam : MonoBehaviour
 
     #endregion
 
-    private Camera playerCamera;
+    private CinemachineVirtualCamera playerCamera;
     private CharacterController characterController;
 
     private Vector3 moveDirection;
@@ -91,7 +92,7 @@ public class FirstPersonController_Sam : MonoBehaviour
 
     private void Awake()
     {
-        playerCamera = GetComponentInChildren<Camera>();
+        playerCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         characterController = GetComponent<CharacterController>();
    
 
